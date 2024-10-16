@@ -1,0 +1,67 @@
+<h1 class="form-title">Preisgruppen &Uuml;bersicht</h1>
+
+<table class="manage-table rounded">
+	<tr>
+		<td class="manage-header-id rounded">ID</td>
+		<td class="manage-header-name rounded">Name</td>
+		<td class="manage-header-code rounded">zugeordnet *1</td>
+		<td class="manage-header-actions rounded">Aktionen</td>
+	</tr>
+	<tmpl_loop name="pricegroup-list">
+	<tr>
+   		<td><tmpl_var name="id"></td>
+		<td><tmpl_var name="name"></td>
+		<td><tmpl_var name="users_associated"></td>
+		<td><a href="?page_id=price&action=group-edit&group_id=<tmpl_var name=id>">edit</a> | <a href="?page_id=price&action=group-delete&group_id=<tmpl_var name=id>">delete</a>
+	</tr>
+	</tmpl_loop>
+</table>
+
+<table>
+	<tr>
+	<tmpl_loop name="pager_groups">
+		<td><tmpl_var name="pagenumber"></td>
+	</tmpl_loop>
+	</tr>
+</table>
+
+
+
+<div class="spacer">&nbsp;</div>
+
+
+
+<h1 class="form-title">Preise &Uuml;bersicht</h1>
+
+<table class="manage-table rounded">
+	<tr>
+		<td class="manage-header-id rounded">ID</td>
+		<td class="manage-header-tld rounded">TLD</td>
+		<td class="manage-header-pricegroup rounded">Preisgruppe</td>
+		<td class="manage-header-baseprice rounded">EK</td>
+		<td class="manage-header-salesprice rounded">VK</td>
+		<td class="manage-header-actions rounded">Aktionen</td>
+	</tr>
+	<tmpl_loop name="price-list">
+	<tr>
+		<td><tmpl_var name="id"></td>
+		<td><tmpl_var name="domain"> (<tmpl_var name="domain_id">)</td>
+		<td><tmpl_var name="pricegroup"> (<tmpl_var name="pricegroup_id">)</td>
+		<td><tmpl_var name="baseprice"></td>
+		<td><tmpl_var name="salesprice"></td>
+		<td><a href="?page_id=price&action=price-edit&price_id=<tmpl_var name=id>">edit</a> | <a href="?page_id=price&action=price-delete&price_id=<tmpl_var name=id>">delete</a>
+	</tr>
+	</tmpl_loop>
+</table>
+
+<table>
+	<tr>
+	<tmpl_loop name="pager_prices">
+		<td><tmpl_var name="pagenumber"></td>
+	</tmpl_loop>
+	</tr>
+</table>
+
+<div class="spacer">&nbsp;</div>
+
+<b>(1*:</b> Zeigt die Zahl der Benutzer, der diese Preisgruppe zugeordnet ist. Eine Preisgruppe kann nur gel&ouml;scht werden, wenn diese Zahl gleich 0 ist.

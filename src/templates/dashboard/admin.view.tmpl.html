@@ -1,0 +1,127 @@
+<h1 class="form-title">Dashboard</h1>
+
+<table class="dashboard-table">
+	<tr>
+		<td class="dashboard-info-bottle rounded">
+			<table style="width:100%">
+				<tr>
+					<td class="dashboard-info-bottle-title rounded">Zusammenfassung</td>
+				</tr>
+				<tr>
+					<td>
+						<table style="width:100%">
+							<tr>
+								<td>Domainnamen</td>
+								<td><tmpl_var name="domaincount"></td>
+							</tr>
+							<tr>
+								<td>Benutzer/Kunden</td>
+								<td><tmpl_var name="usercount"></td>
+							</tr>
+							<tr>
+								<td>Gesamtkosten/Jahr</td>
+								<td><tmpl_var name="overall_costs"> &euro;</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td style="width:2%">&nbsp;</td>
+		<td class="dashboard-info-bottle rounded">
+			<table style="width:100%">
+				<tr>
+					<td class="dashboard-info-bottle-title rounded">Zuletzt registrierte Domainnamen</td>
+				</tr>
+				<tr>
+					<td>
+						<ul>
+							<tmpl_loop name="lastdomainnames">
+								<li><tmpl_var name="domainname">.<tmpl_var name="domain"></li>
+							</tmpl_loop>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="3" style="height:10px">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="dashboard-info-bottle rounded">
+			<table style="width:100%">
+				<tr>
+					<td class="dashboard-info-bottle-title rounded">Kosten gefiltert nach Kunden</td>
+				</tr>
+				<tr>
+					<td>
+						<table style="width:100%">
+							<tmpl_loop name="user_costs">
+								<tr>
+								<td style="width:80%"><a href="?page_id=user&amp;action=edit&amp;user_id=<tmpl_var name=user_id>"><tmpl_var name="username"></a>
+								<td style="width:20%"><tmpl_var name="sum"> &euro;</td>
+								</tr>
+							</tmpl_loop>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td style="width:2%">&nbsp;</td>
+		<td class="dashboard-info-bottle rounded">
+			<table style="width:100%">
+				<tr>
+					<td class="dashboard-info-bottle-title rounded">Demn&auml;chst auslaufend/verl&auml;ngernd</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="spacer">&nbsp;</div>
+						<b>n&auml;chsten Monat</b>
+						<div class="spacer">&nbsp;</div>
+						<table style="width:100%">
+							<tr>
+									<td style="background-color:#f0f0f0;font-size:10px;width:5%">id</td>
+									<td style="background-color:#f0f0f0;font-size:10px;width:40%">Domainname</td>
+									<td style="background-color:#f0f0f0;font-size:10px;width:20%">Expire</td>
+									<td style="background-color:#f0f0f0;font-size:10px;width:5%">AR</td>
+									<td style="background-color:#f0f0f0;font-size:10px;width:30%">Benutzer</td>
+							</tr>
+							<tmpl_loop name="tlds_expire_in_one_month">
+								<tr>
+									<td><tmpl_var name="id"></td>
+									<td style="color:blue"><tmpl_var name="domainname">.<tmpl_var name="tld"></td>
+									<td><tmpl_var name="expire_date"></td>
+									<td><tmpl_var name="autorenew"></td>
+									<td><tmpl_var name="username"></td>
+								</tr>
+							</tmpl_loop>
+						</table>
+
+						<div class="spacer">&nbsp;</div>
+						<b>&uuml;bern&auml;chsten Monat</b>
+						<div class="spacer">&nbsp;</div>
+						<table style="width:100%">
+							<tr>
+									<td style="background-color:#f0f0f0;font-size:10px;width:5%">id</td>
+									<td style="background-color:#f0f0f0;font-size:10px;width:40%">Domainname</td>
+									<td style="background-color:#f0f0f0;font-size:10px;width:20%">Expire</td>
+									<td style="background-color:#f0f0f0;font-size:10px;width:5%">AR</td>
+									<td style="background-color:#f0f0f0;font-size:10px;width:30%">Benutzer</td>
+							</tr>
+							<tmpl_loop name="tlds_expire_in_two_months">
+								<tr>
+									<td><tmpl_var name="id"></td>
+									<td style="color:blue"><tmpl_var name="domainname">.<tmpl_var name="tld"></td>
+									<td><tmpl_var name="expire_date"></td>
+									<td><tmpl_var name="autorenew"></td>
+									<td><tmpl_var name="username"></td>
+								</tr>
+							</tmpl_loop>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>

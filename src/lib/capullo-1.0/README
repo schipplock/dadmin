@@ -1,0 +1,28 @@
+Introduction
+============
+
+This is Capullo, version 1.0. Capullo is a web-application framework
+for the mod_perl2 platform. It's written with KISS in mind and it
+tries to conform to no standard except the one of simpliness.
+
+Reporting Bugs
+==============
+
+Bug reports for Capullo should be sent to:
+
+  andreas@schipplock.de
+  
+Please follow some simple rules:
+
+  * prefix "bug:" to your subject
+  * include the operating system and the version in the body
+  * tell the perl version
+  * describe the bug with all its details
+  * if available write down a recipe for recreating the bug
+  * if you have a fix already, send it as attachment
+  
+I can't promise to fix all the bugs but I'll do my best.
+
+Andreas Schipplock
+andreas@schipplock.de
+ 

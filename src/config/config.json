@@ -1,0 +1,15 @@
+{
+	"database": {
+		"host": "dadmin-db",
+		"user": "dadmin",
+		"pass": "dadmin",
+		"database": "dadmin"
+	},
+	"email": {
+		"user": "",
+		"pass": ""
+	},
+	"domainrequest": {
+		"targetemail": ""
+	}
+}

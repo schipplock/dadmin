@@ -1,0 +1,65 @@
+<h1 class="form-title">Domainnamen &Uuml;bersicht</h1>
+
+<table class="manage-table rounded">
+	<tr>
+		<td class="manage-header-id rounded">ID</td>
+		<td class="manage-header-username rounded">Domainname</td>
+		<td class="manage-header-username rounded">Benutzer</td>
+		<td class="manage-header-email rounded">registriert am</td>
+		<td class="manage-header-id rounded">Laufzeit</td>
+		<td class="manage-header-id rounded">Autorenew</td>
+		<td class="manage-header-code rounded">Status</td>
+		<td class="manage-header-id rounded">Kosten</td>
+		<td class="manage-header-actions rounded">Aktionen</td>
+	</tr>
+	<tmpl_loop name="domainname-list">
+	<tr>
+   		<td><tmpl_var name="id"></td>
+		<td><tmpl_var name="domainname">.<tmpl_var name="topleveldomain"></td>
+		<td><tmpl_var name="username"></td>
+		<td><tmpl_var name="registrationdate"></td>
+		<td><tmpl_var name="validity"> Jahr/e</td>
+		<td><tmpl_var name="autorenew"></td>
+		<td><tmpl_var name="status_code"> (<tmpl_var name="status_name">)</td>
+		<td><tmpl_var name="costs"></td>
+		<td><a href="?page_id=domainname&action=edit&domain_id=<tmpl_var name=id>">edit</a> | <a href="?page_id=domainname&action=delete&domain_id=<tmpl_var name=id>">delete</a>
+	</tr>
+	</tmpl_loop>
+</table>
+
+<table>
+	<tr>
+	<tmpl_loop name="pager">
+		<td><tmpl_var name="pagenumber"></td>
+	</tmpl_loop>
+	</tr>
+</table>
+
+<div class="spacer">&nbsp;</div>
+
+<table style="width:100%">
+<tr>
+	<td>
+		<form name="user-filter" method="post">
+		<input type="hidden" name="page_id" value="domainname">
+		<input type="hidden" name="action" value="manage">
+		Kundenfilter <select name="user_id">
+						<option value="">Alle</option>
+						<option disabled="disabled">--</option>
+						<tmpl_loop name="users">
+							<option value="<tmpl_var name=id>"><tmpl_var name="username"></option>
+						</tmpl_loop>
+					 </select>
+					 <input type="submit" value="filter">	
+		</form>
+	</td>
+	<td>
+		<form name="domainname-search" method="post">
+		<input type="hidden" name="page_id" value="domainname">
+		<input type="hidden" name="action" value="manage">
+		Domainsuche <input type="text" name="domainname" value="<tmpl_var name=domainname>">
+		<input type="submit" value="suche">
+		</form>
+	</td>
+</tr>
+</table>

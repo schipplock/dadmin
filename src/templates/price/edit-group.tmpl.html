@@ -1,0 +1,19 @@
+<h1 class="form-title">Preisgruppe Edit</h1>
+
+<form name="pricebracket-edit-form" method="post">
+<input type="hidden" name="page_id" value="price">
+<input type="hidden" name="action" value="edit-group-save">
+<input type="hidden" name="group_id" value="<tmpl_var name=id>">
+<table class="form-table">
+	<tr>
+		<td>Name</td>
+		<td>&nbsp;</td>
+		<td><input type="text" name="name" value="<tmpl_var name=name>"></td>
+	</tr>
+	<tr>
+		<td><input type="submit" value="speichern"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+</form>

@@ -1,0 +1,34 @@
+<h1 class="form-title">Domainnamen &Uuml;bersicht</h1>
+
+<table class="manage-table rounded">
+	<tr>
+		<td class="manage-header-id rounded">ID</td>
+		<td class="manage-header-username rounded">Domainname</td>
+		<td class="manage-header-email rounded">registriert am</td>
+		<td class="manage-header-id rounded">Laufzeit</td>
+		<td class="manage-header-id rounded">Autorenew</td>
+		<td class="manage-header-code rounded">Status</td>
+		<td class="manage-header-id rounded">Kosten</td>
+	</tr>
+	<tmpl_loop name="domainname-list">
+	<tr>
+   		<td><tmpl_var name="id"></td>
+		<td><tmpl_var name="domainname">.<tmpl_var name="topleveldomain"></td>
+		<td><tmpl_var name="registrationdate"></td>
+		<td><tmpl_var name="validity"> Jahr/e</td>
+		<td><tmpl_var name="autorenew"></td>
+		<td><tmpl_var name="status_code"> (<tmpl_var name="status_name">)</td>
+		<td><tmpl_var name="costs"> &euro;</td>
+	</tr>
+	</tmpl_loop>
+</table>
+
+<table>
+	<tr>
+	<tmpl_loop name="pager">
+		<td><tmpl_var name="pagenumber"></td>
+	</tmpl_loop>
+	</tr>
+</table>
+
+<div class="spacer">&nbsp;</div>

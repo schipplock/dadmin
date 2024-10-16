@@ -1,0 +1,61 @@
+# -------------------------------------------------------------------------------
+# "THE BEER-WARE LICENSE" (Revision 42):
+# <andreas@schipplock.de> wrote this file. As long as you retain this notice you
+# can do whatever you want with this stuff. If we meet some day, and you think
+# this stuff is worth it, you can buy me a beer in return Andreas Schipplock
+# -------------------------------------------------------------------------------
+version: '2.1'
+
+networks:
+  local-net:
+    name: local-net
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.10.1.0/24
+
+volumes:
+  dadmin-db:
+
+services:
+
+  dadmin-db:
+    build: ./docker-images/postgres
+    image: dadmin-db:1.0.0
+    container_name: dadmin-db
+    networks:
+      local-net:
+        aliases:
+          - dadmin-db
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: dadmin
+      POSTGRES_DB: dadmin
+      POSTGRES_PASSWORD: dadmin
+    volumes:
+      - dadmin-db:/var/lib/postgresql/data
+
+  dadmin-app:
+    build: ./docker-images/apache
+    image: dadmin-app:1.0.0
+    container_name: dadmin-app
+    networks:
+      local-net:
+        aliases:
+          - dadmin-app
+    restart: always
+    ports:
+      - "8080:80"
+    volumes:
+      - ./docker-images/apache/apache2.conf:/etc/apache2/apache2.conf
+      - ./docker-images/apache/site.conf:/etc/apache2/sites-enabled/000-default.conf
+      - ./src/lib/capullo-1.0:/opt/capullo
+      - ./src/config:/opt/dadmin/config
+      - ./src/pages:/opt/dadmin/pages
+      - ./src/templates:/opt/dadmin/templates
+      - ./src/assets:/var/www/html/assets
+      - ./src/index.pl:/var/www/html/index.pl
+    depends_on:
+      - dadmin-db

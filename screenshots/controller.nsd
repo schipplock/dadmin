@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root text="&#34;controller&#34;" comment="&#34;&#34;" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;Einlesen der globalen Konfiguration&#34;" comment="" color="ffffff" rotated="0"></instruction>
+		<instruction text="&#34;Verarbeiten des HTTP Requests&#34;" comment="" color="ffffff" rotated="0"></instruction>
+		<case text="&#34;page ID&#34;,&#34;login&#34;,&#34;dashboard&#34;,&#34;status&#34;,&#34;price&#34;,&#34;user&#34;,&#34;domainname&#34;,&#34;settings&#34;,&#34;logout&#34;,&#34;login&#34;" comment="&#34;&#34;" color="ffffff">
+			<qCase>
+				<instruction text="&#34;lade &#34;&#34;login.pm&#34;&#34;&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+			</qCase>
+			<qCase>
+				<instruction text="&#34;lade &#34;&#34;dashboard.pm&#34;&#34;&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+			</qCase>
+			<qCase>
+				<instruction text="&#34;...&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+			</qCase>
+			<qCase>
+				<instruction text="&#34;...&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+			</qCase>
+			<qCase>
+				<instruction text="&#34;...&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+			</qCase>
+			<qCase>
+				<instruction text="&#34;...&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+			</qCase>
+			<qCase>
+				<instruction text="&#34;...&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+			</qCase>
+			<qCase>
+				<instruction text="&#34;...&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+			</qCase>
+			<qCase>
+				<instruction text="&#34;...&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+			</qCase>
+		</case>
+	</children>
+</root>

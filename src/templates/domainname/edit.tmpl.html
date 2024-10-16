@@ -1,0 +1,85 @@
+<h1 class="form-title">Domainname Edit</h1>
+
+<form name="domainname-new-form" method="post">
+<input type="hidden" name="page_id" value="domainname">
+<input type="hidden" name="domainname_id" value="<tmpl_var name=id>">
+<input type="hidden" name="action" value="edit-save">
+<table class="form-table">
+	<tr>
+		<td>Domainname</td>
+		<td><input type="text" name="domainname" value="<tmpl_var name=domainname>" disabled="disabled"></td>
+		<td>Topleveldomain</td>
+		<td>
+			<select name="topleveldomain_id" disabled="disabled">
+			<option value="<tmpl_var name=curr_topleveldomain_id>"><tmpl_var name="curr_topleveldomain_domain"></option>
+			<option disabled="disabled">--</option>
+			<tmpl_loop name="tlds">
+				<option value="<tmpl_var name=id>"><tmpl_var name="domain"></option>
+			</tmpl_loop>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Registriert am</td>
+		<td><input type="text" name="daynumber" style="width:20px" value="<tmpl_var name=daynumber>" disabled="disabled"> <input type="text" name="monthnumber" style="width:20px" value="<tmpl_var name=monthnumber>" disabled="disabled"> <input type="text" name="yearnumber" style="width:40px" value="<tmpl_var name=yearnumber>" disabled="disabled"></td>
+		<td>Laufzeit</td>
+		<td>
+			<select name="validity">
+				<option value="<tmpl_var name=curr_validity>"><tmpl_var name=curr_validity></option>
+				<option disabled="disabled">--</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select> Jahr/e
+		</td>
+	</tr>
+	<tr>
+		<td>Auto-Renew</td>
+		<td>
+			<select name="autorenew">
+				<option value="<tmpl_var name=curr_autorenew>"><tmpl_var name=curr_autorenew></option>
+				<option disabled="disabled">--</option>
+				<option value="1">Ja</option>
+				<option value="0">Nein</option>
+			</select>
+		</td>
+		<td>Status</td>
+		<td>
+			<select name="status_id">
+				<option value="<tmpl_var name=curr_status_id>"><tmpl_var name=curr_status_code> (<tmpl_var name=curr_status_name>)</option>
+				<option disabled="disabled">--</option>
+				<tmpl_loop name="status">
+				<option value="<tmpl_var name=id>"><tmpl_var name="code"> (<tmpl_var name="description">)</option>
+				</tmpl_loop>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Kunde/Benutzer</td>
+		<td>
+			<select name="user_id">
+				<option value="<tmpl_var name=curr_user_id>"><tmpl_var name=curr_username></option>
+				<option disabled="disabled">--</option>
+				<tmpl_loop name="users">
+				<option value="<tmpl_var name=id>"><tmpl_var name="username"></option>
+				</tmpl_loop>
+			</select>
+		</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><input type="submit" value="Speichern"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+</form>

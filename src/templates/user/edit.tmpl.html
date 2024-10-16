@@ -1,0 +1,92 @@
+<h1 class="form-title">Benutzer Edit</h1>
+
+<form name="user-edit-form" method="post">
+<input type="hidden" name="page_id" value="user">
+<input type="hidden" name="user_id" value="<tmpl_var name=id>">
+<input type="hidden" name="action" value="edit-save">
+<table class="form-table">
+	<tr>
+		<td>Benutzername</td>
+		<td><input type="text" name="username" value="<tmpl_var name=username>" disabled="disabled"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Passwort</td>
+		<td><input type="password" name="password"></td>
+		<td>Passwort (wiederholt)</td>
+		<td><input type="password" name="password-repeated"></td>
+	</tr>
+	<tr>
+		<td colspan="4">&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Firma</td>
+		<td><input type="text" name="company" value="<tmpl_var name=company>"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Vorname</td>
+		<td><input type="text" name="firstname" value="<tmpl_var name=firstname>" disabled="disabled"></td>
+		<td>Nachname</td>
+		<td><input type="text" name="lastname" value="<tmpl_var name=lastname>"></td>
+	</tr>
+	<tr>
+		<td>Email</td>
+		<td><input type="text" name="email" value="<tmpl_var name=email>"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Telefon</td>
+		<td><input type="text" name="phone" value="<tmpl_var name=phone>"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Mobil</td>
+		<td><input type="text" name="mobile" value="<tmpl_var name=mobile>"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;<td>
+	</tr>
+	<tr>
+		<td colspan="4">&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Land</td>
+		<td><input type="text" name="country" value="<tmpl_var name=country>"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Plz / Stadt</td>
+		<td><input type="text" name="zipcode" value="<tmpl_var name=zipcode>"> <input type="text" name="city" value="<tmpl_var name=city>"></td>
+		<td>Strasse</td>
+		<td><input type="text" name="street" value="<tmpl_var name=street>"></td>
+	</tr>
+	<tr>
+		<td colspan="4">&nbsp;</td>
+	</tr>
+	<tr>
+		<td>Preisgruppe</td>
+		<td>
+			<select name="pricegroup_id">
+				<option value="<tmpl_var name=curr_pricegroup_id>"><tmpl_var name="curr_pricegroup_name"></option>
+				<option disabled="disabled">--</option>
+				<tmpl_loop name="pricegroups">
+				<option value="<tmpl_var name=id>"><tmpl_var name="name"></option>
+				</tmpl_loop>
+			</select>
+		</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td><input type="submit" value="Speichern"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+</form>

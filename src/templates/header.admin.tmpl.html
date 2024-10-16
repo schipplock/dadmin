@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title>DAdmin - Domainnamenverwaltung</title>
+  <link rel="stylesheet" href="assets/style.css" type="text/css">
+  <script type="text/javascript" src="assets/jquery.js"></script>
+  <script type="text/javascript" src="assets/jquery.corners.js"></script>
+  <script type="text/javascript">
+	  $(document).ready(function(){
+		$('.rounded').corners();
+	  });
+  </script>
+</head>
+<body>
+	<table id="caption-bar">
+		<tr>
+			<td id="logo-caption">
+				DAdmin
+			</td>
+			<td id="user-bar">
+				<a href="?page_id=logout">Logout</a>
+			</td>
+		</tr>
+	</table>
+	
+	<table id="content">
+		<tr>
+			<td id="menu">
+				
+				<table class="menu-bottle">
+					<tr>
+						<td class="menu-caption">
+							<a href="?page_id=dashboard">Dashboard</a>
+						</td>
+					</tr>
+				</table>
+				
+				<div class="spacer">&nbsp;</div>
+				
+				<table class="menu-bottle">
+					<tr>
+						<td class="menu-caption">
+							Domainname
+						</td>
+					</tr>
+					<tr>
+						<td class="menu-entries">
+							<table>
+								<tr>
+									<td>- <a href="?page_id=domainname&amp;action=new">Neu</a></td>
+								</tr>
+								<tr>
+									<td>- <a href="?page_id=domainname&amp;action=manage">&Uuml;bersicht</a></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				
+				<div class="spacer">&nbsp;</div>
+
+				<table class="menu-bottle">
+					<tr>
+						<td class="menu-caption">
+							Benutzer
+						</td>
+					</tr>
+					<tr>
+						<td class="menu-entries">
+							<table>
+								<tr>
+									<td>- <a href="?page_id=user&amp;action=new">Neu</a></td>
+								</tr>
+								<tr>
+									<td>- <a href="?page_id=user&amp;action=manage">&Uuml;bersicht</a></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				
+				<div class="spacer">&nbsp;</div>
+				
+				<table class="menu-bottle">
+					<tr>
+						<td class="menu-caption">
+							Preise
+						</td>
+					</tr>
+					<tr>
+						<td class="menu-entries">
+							<table>
+								<tr>
+									<td>- <a href="?page_id=price&amp;action=new-group">Neue Gruppe</a></td>
+								</tr>
+								<tr>
+									<td>- <a href="?page_id=price&amp;action=new-price">Neuer Preis</a></td>
+								</tr>
+								<tr>
+									<td>- <a href="?page_id=price&amp;action=manage">&Uuml;bersicht</a></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				
+				<div class="spacer">&nbsp;</div>
+				
+				<table class="menu-bottle">
+					<tr>
+						<td class="menu-caption">
+							Status
+						</td>
+					</tr>
+					<tr>
+						<td class="menu-entries">
+							<table>
+								<tr>
+									<td>- <a href="?page_id=status&amp;action=new">Neu</a></td>
+								</tr>
+								<tr>
+									<td>- <a href="?page_id=status&amp;action=manage">&Uuml;bersicht</a></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				
+			</td>
+			<td id="maincontent">
+			
+			

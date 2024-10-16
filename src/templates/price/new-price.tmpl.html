@@ -1,0 +1,45 @@
+<h1 class="form-title">Preis Neu</h1>
+
+<form name="price-new-form" method="post">
+<input type="hidden" name="page_id" value="price">
+<input type="hidden" name="action" value="new-price-save">
+<table class="form-table">
+	<tr>
+		<td>Top-Level-Domain</td>
+		<td>&nbsp;</td>
+		<td>
+			<select name="tld_id">
+				<tmpl_loop name="tlds">
+				<option value="<tmpl_var name=id>"><tmpl_var name="domain"></option>
+				</tmpl_loop>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Einkaufspreis (x.xx)</td>
+		<td>&nbsp;</td>
+		<td><input type="text" name="baseprice"></td>
+	</tr>
+	<tr>
+		<td>Verkaufspreis (x.xx)</td>
+		<td>&nbsp;</td>
+		<td><input type="text" name="salesprice"></td>
+	</tr>
+	<tr>
+		<td>Preisgruppe</td>
+		<td>&nbsp;</td>
+		<td>
+			<select name="pricegroup_id">
+				<tmpl_loop name="pricegroups">
+				<option value="<tmpl_var name=id>"><tmpl_var name="name"></option>
+				</tmpl_loop>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="submit" value="speichern"></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+</form>

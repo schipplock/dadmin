@@ -1,0 +1,36 @@
+<h1 class="form-title">Benutzer &Uuml;bersicht</h1>
+
+<table class="manage-table rounded">
+	<tr>
+		<td class="manage-header-id rounded">ID</td>
+		<td class="manage-header-username rounded">Benutzername</td>
+		<td class="manage-header-firstlastname rounded">Name</td>
+		<td class="manage-header-email rounded">Email</td>
+		<td class="manage-header-phone rounded">Telefon</td>
+		<td class="manage-header-userpricegroup rounded">Preisgruppe</td>
+		<td class="manage-header-domaincount rounded">Domains</td>
+		<td class="manage-header-actions rounded">Aktionen</td>
+	</tr>
+	<tmpl_loop name="user-list">
+	<tr>
+   		<td><tmpl_var name="id"></td>
+		<td><tmpl_var name="username"></td>
+		<td><tmpl_var name="firstname"> <tmpl_var name="lastname"></td>
+		<td><tmpl_var name="email"></td>
+		<td><tmpl_var name="phone"></td>
+		<td><tmpl_var name="pricegroup_name"> (<tmpl_var name="pricegroup_id">)</td>
+		<td><tmpl_var name="domaincount"></td>
+		<td><a href="?page_id=user&action=edit&user_id=<tmpl_var name=id>">edit</a> | <a href="?page_id=user&action=delete&user_id=<tmpl_var name=id>">delete</a>
+	</tr>
+	</tmpl_loop>
+</table>
+
+<table>
+	<tr>
+	<tmpl_loop name="pager">
+		<td><tmpl_var name="pagenumber"></td>
+	</tmpl_loop>
+	</tr>
+</table>
+
+<div class="spacer">&nbsp;</div>

@@ -1,0 +1,314 @@
+html {
+	height:100%;
+}
+
+body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+	font-family:verdana;
+	font-size:11px;
+}
+
+#login-table {
+	width:100%;
+	height:100%;
+}
+
+#login-top {
+	width:100%;
+	height:30%;
+	background-color:#ffffff;
+}
+
+#login-form {
+	width:100%;
+	height:40%;
+	background-color:#ffffff;
+}
+
+#login-form-pane {
+	width:100%;
+	height:100%;
+}
+
+#login-form-left {
+	width:30%;
+	height:100%;
+	background-color:#ffffff;
+}
+
+#login-form-middle {
+	width:40%;
+	height:100%;
+	background-color:#ffffff;
+	border-width:1px;
+	border-color:gray;
+	border-style:solid;
+	padding:10px;
+	vertical-align:middle;
+	font-family:verdana;
+	font-size:11px;
+	text-align:center;
+}
+
+#login-form-right {
+	width:30%;
+	height:100%;
+	background-color:#ffffff;
+}
+
+#login-bottom {
+	width:100%;
+	height:30%;
+	background-color:#ffffff;
+}
+
+#caption-bar {
+	width:100%;
+	height:8%;
+	border-width:0px;
+	background-color:#000000;
+}
+
+#logo-caption {
+	font-size:28px;
+	font-weight:bold;
+	font-style:italic;
+	color:#ffffff;
+	font-family:verdana;
+}
+
+#content {
+	width:100%;
+	height:87%;
+	border-width:0px;
+	background-color:#ffffff;
+}
+
+#footer-bar {
+	width:100%;
+	height:3%;
+	font-size:8px;
+	border-width:0px;
+	background-color:#000000;
+}
+
+#menu {
+	width:15%;
+	background-color:#ffffff;
+	border-right-color:#f0f0f0;
+	border-right-style:solid;
+	border-right-width:1px;
+	vertical-align:top;
+}
+
+#maincontent {
+	width:85%;
+	background-color:#ffffff;
+	vertical-align:top;
+}
+
+#menu tbody {width:100%}
+
+.menu-bottle {
+	width:99%;
+	border-color:#f0f0f0;
+	border-style:solid;
+	border-width:1px;
+}
+
+.menu-caption {
+	width:100%;
+	border-color:#f0f0f0;
+	border-style:solid;
+	border-width:1px;
+	font-weight:bold;
+	color:#000000;
+	background-color:#f0f0f0;
+	font-family:verdana;
+	font-size:11px;
+}
+
+.menu-entries {
+	width:100%;
+	padding-left:10px;
+	font-size:10px;
+	font-family:verdana;
+}
+
+.spacer {
+	height:10px;
+}
+
+a:link,a:hover,a:visited {
+	color:blue;
+	text-decoration:none;
+}
+
+#user-bar {
+	text-align:right;
+	color:#ffffff;
+	font-size:12px;
+	font-weight:bold;
+	font-family:verdana;
+	vertical-align:bottom;
+}
+
+#user-bar a:link, #user-bar a:hover, #user-bar a:visited {
+	color:#ffffff;
+	text-decoration:none;
+}
+
+.form-title {
+	padding:0px;
+	margin:0px;
+	font-style:italic;
+	font-weight:bold;
+	margin-bottom:7px;
+}
+
+.manage-table {
+	width:100%;
+	border-width:1px;
+	border-color:#f0f0f0;
+	border-style:solid;
+}
+
+.manage-header-id {
+	width:5%;
+	padding:2px;
+	padding-left:5px;
+	background-color:#f0f0f0;
+	font-weight:bold;
+}
+
+.manage-header-code {
+	width:10%;
+	padding:2px;
+	padding-left:5px;
+	background-color:#f0f0f0;
+	font-weight:bold;
+}
+
+.manage-header-name {
+	width:65%;
+	padding:2px;
+	padding-left:5px;
+	background-color:#f0f0f0;
+	font-weight:bold;
+}
+
+.manage-header-actions {
+	width:10%;
+	padding:2px;
+	padding-left:5px;
+	background-color:#f0f0f0;
+	font-weight:bold;
+}
+
+.manage-header-associated {
+	width:10%;
+	padding:2px;
+	padding-left:5px;
+	background-color:#f0f0f0;
+	font-weight:bold;
+}
+
+.manage-header-tld {
+	width:10%;
+	padding:2px;
+	padding-left:5px;
+	background-color:#f0f0f0;
+	font-weight:bold;
+}
+
+.manage-header-pricegroup {
+	width:55%;
+	padding:2px;
+	padding-left:5px;
+	background-color:#f0f0f0;
+	font-weight:bold;
+}
+
+.manage-header-baseprice {
+	width:10%;
+	padding:2px;
+	padding-left:5px;
+	background-color:#f0f0f0;
+	font-weight:bold;
+}
+
+.manage-header-salesprice {
+	width:10%;
+	padding:2px;
+	padding-left:5px;
+	background-color:#f0f0f0;
+	font-weight:bold;
+}
+
+.manage-header-username {
+	width:20%;
+	padding:2px;
+	padding-left:5px;
+	background-color:#f0f0f0;
+	font-weight:bold;
+}
+
+.manage-header-firstlastname {
+	width:10%;
+	padding:2px;
+	padding-left:5px;
+	background-color:#f0f0f0;
+	font-weight:bold;
+}
+
+.manage-header-email {
+	width:10%;
+	padding:2px;
+	padding-left:5px;
+	background-color:#f0f0f0;
+	font-weight:bold;
+}
+
+.manage-header-phone {
+	width:20%;
+	padding:2px;
+	padding-left:5px;
+	background-color:#f0f0f0;
+	font-weight:bold;
+}
+
+.manage-header-userpricegroup {
+	width:20%;
+	padding:2px;
+	padding-left:5px;
+	background-color:#f0f0f0;
+	font-weight:bold;
+}
+
+.manage-header-domaincount {
+	width:5%;
+	padding:2px;
+	padding-left:5px;
+	background-color:#f0f0f0;
+	font-weight:bold;
+}
+
+.dashboard-table {
+	width:100%;
+}
+
+.dashboard-info-bottle {
+	border-width:1px;
+	border-color:#f0f0f0;
+	border-style:solid;
+	width:49%;
+	vertical-align:top;
+}
+
+.dashboard-info-bottle-title {
+	background-color:#f0f0f0;
+	font-weight:bold;
+	padding:4px;
+}
