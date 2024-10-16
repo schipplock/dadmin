@@ -7,8 +7,8 @@ Auch kann man mit DAdmin die Kosten verwalten und bei Bedarf pro Kunde auswerten
 ## Screenshots
 
 <p align="center">
-<a href="dadmin/src/branch/main/screenshots/2022/dashboard.png"><img src="screenshots/2022/dashboard_thumb.png" /></a>
-<a href="dadmin/src/branch/main/screenshots/2022/preisgruppe.png"><img src="screenshots/2022/preisgruppe_thumb.png" /></a>
+<a href="screenshots/2022/dashboard.png"><img src="screenshots/2022/dashboard_thumb.png" /></a>
+<a href="screenshots/2022/preisgruppe.png"><img src="screenshots/2022/preisgruppe_thumb.png" /></a>
 </p>
 
 ## Hintergrund
